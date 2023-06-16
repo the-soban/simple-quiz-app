@@ -10,7 +10,7 @@ html{
 }
 
 body{
-    background-color: rgb(231, 231, 231);
+    background-color: rgb(27, 27, 27);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -18,8 +18,14 @@ body{
     justify-content: center;
 }
 
+.heading{
+    margin-bottom: 24px;
+    color: #9beb07;
+}
+
 .quiz-box{
-    background-color: #ffffff;
+    background-color: rgb(65, 65, 65);
+    border: 6px solid #9beb07;
     border-radius: 10px;
     width: 600px;
     max-width: 100%;
@@ -29,14 +35,71 @@ body{
 
 .quiz-content{
     padding: 2rem 2rem 1.4rem;
-    display: flex;
+    display: none;  /* flex */
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
 }
 
+.desc-box{
+    padding: 2rem 2rem 1.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.desc{
+    margin-bottom: 22px;
+    font-size: 1.1rem;
+    color: #f5f5f5;
+}
+
+.result-box{
+    padding: 2rem 2rem 1.4rem;
+    display: none;  /* flex */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.result-info{
+    margin-bottom: 22px;
+    font-size: 1.1rem;
+    color: #f5f5f5;
+}
+
+.result-info span{
+    color: #9beb07;
+}
+
+.load-btn{
+    display: block;
+    width: 70%;
+    text-align: center;
+    padding: 1rem 2rem;
+    margin: 4px 0 14px;
+    border: none;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1.1rem;
+    color: #ffffff;
+    box-shadow: 0px 0px 28px 6px rgba(155, 235, 7, 0.3);
+    background-color: #9beb07;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+}
+
+.load-btn:hover{
+    background-color: #89cf06;
+}
+
 .question{
-    margin: 0px 0px 8px;
+    margin: 0px 0px 24px;
+    text-align: center;
+    display: block;
+    width: 100%;
+    color: #9beb07;
 }
 
 .answers{
@@ -46,14 +109,76 @@ body{
 
 .answers li{
     margin: 8px 0px;
+    cursor: pointer;
 }
 
 .answers li input{
     margin-right: 6px;
 }
 
+.answers li label{
+    cursor: pointer;
+    color: #f5f5f5;
+}
+
+.info{
+    color: red;
+    display: none;
+    font-weight: 600;
+    width: 100%;
+    text-align: center;
+}
+
+.buttons{
+    display: none;  /* flex */
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 32px;
+}
+
+.back-btn{
+    display: inline;
+    width: 25%;
+    text-align: center;
+    padding: 0.8rem 2rem;
+    margin: 0px 10px;
+    border: none;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1.1rem;
+    color: #9beb07;
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+}
+
+.back-btn:hover{
+    background-color: #f5f5f5;
+}
+
 .submit-btn{
-    display: block;
+    display: inline;
+    width: 25%;
+    text-align: center;
+    padding: 0.8rem 2rem;
+    margin: 0px 10px;
+    border: none;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1.1rem;
+    color: #ffffff;
+    background-color: #9beb07;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+}
+
+.submit-btn:hover{
+    background-color: #89cf06;
+}
+
+.reload-btn{
+    display: none;   /* block */
     width: 100%;
     text-align: center;
     padding: 1.2rem 2rem;
@@ -61,11 +186,11 @@ body{
     font-family: inherit;
     font-size: 1.1rem;
     color: #ffffff;
-    background-color: blueviolet;
+    background-color: #9beb07;
     cursor: pointer;
     transition: all 0.2s ease-out;
 }
 
-.submit-btn:hover{
-    background-color: rgb(111, 34, 184);
+.reload-btn:hover{
+    background-color: #89cf06;
 }

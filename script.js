@@ -144,6 +144,15 @@ function deSelect(){
 
 function showInfo(){
     resultBox.style.display = 'flex';
+    if(score < 4){
+        resultInfo1.style.display = 'block';
+    }
+    if(score > 3 && score < 7){
+        resultInfo2.style.display = 'block';
+    }
+    if(score > 6){
+        resultInfo3.style.display = 'block';
+    }
 }
 
 submitBtn.addEventListener('click', () => {

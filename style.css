@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Blinker:wght@100;200;300;400;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -10,7 +12,7 @@ html{
 }
 
 body{
-    background-color: rgb(27, 27, 27);
+    background-color: rgb(39, 39, 39);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -19,13 +21,15 @@ body{
 }
 
 .heading{
+    font-family: 'Blinker', sans-serif;
+    word-spacing: 0.3rem;
     margin-bottom: 24px;
     color: #9beb07;
 }
 
 .quiz-box{
-    background-color: rgb(65, 65, 65);
-    border: 6px solid #9beb07;
+    background-color: rgb(54, 54, 54);
+    border: 5px solid #9beb07;
     border-radius: 10px;
     width: 600px;
     max-width: 100%;
@@ -64,6 +68,7 @@ body{
 }
 
 .result-info{
+    display: none;
     margin-bottom: 22px;
     font-size: 1.1rem;
     color: #f5f5f5;
@@ -95,6 +100,8 @@ body{
 }
 
 .question{
+    font-family: 'Blinker', sans-serif;
+    word-spacing: 0.2rem;
     margin: 0px 0px 24px;
     text-align: center;
     display: block;
@@ -122,7 +129,7 @@ body{
 }
 
 .info{
-    color: red;
+    color: rgb(253, 53, 53);
     display: none;
     font-weight: 600;
     width: 100%;
@@ -193,4 +200,72 @@ body{
 
 .reload-btn:hover{
     background-color: #89cf06;
+}
+
+
+@media only screen and (min-width: 220px) and (max-width: 470px) {
+    
+    .heading{
+        font-size: 1.2rem;
+        margin: 0 auto;
+        padding: 0 42px;
+        text-align: center;
+    }
+
+    .quiz-box{
+        width: 280px;
+        max-width: 100%;
+        margin: 24px 20px;
+    }
+
+    .quiz-content{
+        padding: 1.6rem 2rem 1rem;
+    }
+
+    .desc{
+        font-size: 0.8rem;
+    }
+
+    .load-btn{
+        width: 50%;
+        font-size: 0.8rem;
+        padding: 0.6rem 0;
+    }
+
+    .question{
+        font-size: 1rem;
+    }
+
+    .answers li input{
+        width: 12px;
+        height: 10px;
+    }
+
+    .answers li label{
+        font-size: 0.8rem;
+    }
+
+    .buttons{
+        /* justify-content: space-ar; */
+    }
+
+    .back-btn, .submit-btn{
+        font-size: 0.8rem;
+        margin: 0px 12px;
+        padding: 0.6rem 0;
+    }
+
+    .reload-btn{
+        padding: 0.6rem 2rem;
+        font-size: 0.9rem;
+    }
+
+    .result-box{
+        padding: 1rem 2rem 0.4rem; 
+    }
+
+    .result-info{
+        font-size: 0.8rem;
+    }
+
 }
